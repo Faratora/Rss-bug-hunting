@@ -70,6 +70,8 @@ function applyPromo() {
 
 function clearCart() {
   cart = [];
+  discount = 0;
+  promoInput.value = "";
   renderCart();
 }
 
