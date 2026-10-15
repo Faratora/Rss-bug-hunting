@@ -71,6 +71,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
+  overflow: visible;
 }
 
 .card {
@@ -78,6 +79,15 @@ body {
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+  position: relative;
+  z-index: 10;
 }
 
 .card h3 {
@@ -99,4 +109,24 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #2563eb;
+}
+
+.features {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.feature {
+  margin-bottom: 6px;
+  padding-left: 1.2em;
+  position: relative;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.feature::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
 }
